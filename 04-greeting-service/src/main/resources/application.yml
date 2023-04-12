@@ -1,0 +1,21 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: gretting-service
+  config:
+    import: optional:configserver:http://localhost:8888/
+  cloud:
+    config:
+      profile: prod
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - '*'
+greeting-service:
+  greeting: "Ola"
+  default-value: "Mundo"
+
+

@@ -1,0 +1,13 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: erudio-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/GusPLF0/gusplf-config-server
+          default-label: main
+          search-paths:
+            - 'greeting-service*'
